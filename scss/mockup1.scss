@@ -41,6 +41,31 @@ a{
 	}
 }
 
+#teachers {
+	#teachersnav {
+		display: none;
+	}
+
+	margin: 0 10px;
+
+	h2 {
+		font-size: 2em;
+		margin-bottom: 5px;
+	}
+
+	img {
+		width: 30%;
+		float:left;
+		border: 1px solid #ccc;
+		padding: 1px;
+		margin: 0 15px 5px 0;
+	}
+
+	p {
+		margin-bottom: 20px;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	html, body {
 		height: 100%;
@@ -91,6 +116,6 @@ a{
 	}
 
 	#teachers {
-		background-color:
+		background-color: #BAC1B4;
 	}
 }
