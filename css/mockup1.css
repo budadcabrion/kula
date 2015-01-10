@@ -18,10 +18,7 @@ a {
     color: #46729c; }
 
 #navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
   #navbar h1 {
     background-color: #E1E6EA;
     padding: 0.25em;
@@ -29,15 +26,6 @@ a {
     #navbar h1 #hamburger {
       float: right; }
   #navbar #navbuttons {
-    display: none; }
-  #navbar #navbuttons.selected {
-    display: block; }
-  #navbar #navbuttons {
-    position: absolute;
-    left: 40%;
-    width: 60%;
-    height: 100%;
-    right: 100%;
     background-color: #E1E6EA; }
     #navbar #navbuttons li a {
       display: block;
@@ -53,11 +41,6 @@ a {
     #navbar #navbuttons li a:hover, #navbar #navbuttons li a:active, #navbar #navbuttons li a.selected {
       background-color: #97A1AA; }
 
-.page {
-  margin: 3em 10px 10px 10px; }
-
-#teachers #teachersnav {
-  display: none; }
 #teachers h2 {
   font-size: 2em;
   margin-bottom: 5px;
@@ -71,20 +54,37 @@ a {
 #teachers p {
   margin-bottom: 20px; }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 799px) {
+  #navbar {
+    position: fixed;
+    top: 0; }
+    #navbar #navbuttons {
+      display: none;
+      position: absolute;
+      width: 200px;
+      height: 2000px;
+      right: 0; }
+    #navbar #navbuttons.selected {
+      display: block; }
+
+  .page {
+    margin: 4em 10px 10px 10px; }
+    .page .nav {
+      display: none; } }
+@media screen and (min-width: 800px) {
   html, body {
     height: 100%; }
 
   #navbar {
     position: fixed;
-    top: inherit;
     bottom: 0px;
     height: 120px;
-    width: 100%;
-    background-color: #E1E6EA; }
+    background-color: #E1E6EA;
+    border-top: 2px solid white; }
     #navbar h1 {
       font-size: 3em;
-      margin: 55px 0 4px 10px; }
+      margin: 44px 0 4px 10px;
+      position: absolute; }
       #navbar h1 #hamburger {
         display: none; }
     #navbar #navbuttons {
@@ -98,6 +98,7 @@ a {
         display: block;
         font-weight: light; }
         #navbar #navbuttons li a {
+          font-size: 1em;
           display: block;
           position: relative;
           margin: 10px;
@@ -130,9 +131,34 @@ a {
           border-color: transparent; }
 
   .page {
-    margin-bottom: 120px; }
+    margin-bottom: 120px;
+    min-height: 100%;
+    overflow: auto; }
 
   #teachers {
-    background-color: #BAC1B4; } }
+    background-color: #BAC1B4; }
+    #teachers .nav {
+      width: 20%;
+      margin: 2.5%;
+      float: left; }
+      #teachers .nav h1, #teachers .nav a {
+        color: #CC6600;
+        margin: 2px;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em;
+        border-radius: 0.5em;
+        padding: 10px;
+        display: block;
+        background-color: white; }
+      #teachers .nav h1 {
+        color: #CC6600;
+        font-size: 2em; }
+      #teachers .nav a {
+        color: #CC6600; }
+    #teachers .info {
+      float: left; }
+      #teachers .info img {
+        max-width: 360px;
+        max-height: 380px; } }
 
 /*# sourceMappingURL=mockup1.css.map */
