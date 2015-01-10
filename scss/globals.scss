@@ -15,10 +15,9 @@ $buttonbg2: #97A1AA;
 }
 
 @mixin rounded-kula($radius: 0.5em) {
-  -webkit-border-top-left-radius: $radius;
-  -moz-border-top-left-radius: $radius;
   border-top-left-radius: $radius;
-  -webkit-border-bottom-right-radius: $radius;
-  -moz-border-bottom-right-radius: $radius;
   border-bottom-right-radius: $radius;
+
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
 }

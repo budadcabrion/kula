@@ -22,12 +22,10 @@ html, body {
       #navbar #navbuttons li a {
         display: block;
         margin: 10px;
-        -webkit-border-top-left-radius: 1em;
-        -moz-border-top-left-radius: 1em;
         border-top-left-radius: 1em;
-        -webkit-border-bottom-right-radius: 1em;
-        -moz-border-bottom-right-radius: 1em;
         border-bottom-right-radius: 1em;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
         margin: 0 1px;
         padding: 10px 20px 10px 20px; }
     #navbar #navbuttons li:first-child a {
