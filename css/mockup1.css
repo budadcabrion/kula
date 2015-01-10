@@ -95,17 +95,37 @@ a {
         font-weight: light; }
         #navbar #navbuttons li a {
           display: block;
+          position: relative;
           margin: 10px;
-          -webkit-border-top-left-radius: 1em;
-          -moz-border-top-left-radius: 1em;
-          border-top-left-radius: 1em;
-          -webkit-border-bottom-right-radius: 1em;
-          -moz-border-bottom-right-radius: 1em;
-          border-bottom-right-radius: 1em;
+          -webkit-border-top-left-radius: 13px;
+          -moz-border-top-left-radius: 13px;
+          border-top-left-radius: 13px;
+          -webkit-border-bottom-right-radius: 13px;
+          -moz-border-bottom-right-radius: 13px;
+          border-bottom-right-radius: 13px;
           margin: 0 1px;
           padding: 10px 20px 10px 20px; }
+          #navbar #navbuttons li a:before, #navbar #navbuttons li a:after {
+            position: absolute;
+            content: ' ';
+            border-radius: 18px;
+            border: 6px solid #4D5C6A;
+            width: 25px;
+            height: 20px; }
+          #navbar #navbuttons li a:before {
+            left: -31px;
+            bottom: -6px;
+            clip: rect(15px, 31px, 26px, 16px); }
+          #navbar #navbuttons li a:after {
+            right: -31px;
+            top: -6px;
+            clip: rect(6px, 16px, 18px, 6px); }
+          #navbar #navbuttons li a:hover:before, #navbar #navbuttons li a:hover:after, #navbar #navbuttons li a.selected:after, #navbar #navbuttons li a.selected:before {
+            border-color: #97A1AA; }
       #navbar #navbuttons li:first-child a {
         border-top-left-radius: 0; }
+        #navbar #navbuttons li:first-child a:before {
+          border-color: transparent; }
 
   .page {
     margin-bottom: 120px; }

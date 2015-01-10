@@ -138,16 +138,47 @@ a{
 				display:block;
 				font-weight: light;
 				a {
-					display:block;
+					display: block;
+					position: relative;
 					margin: 10px;
-					@include rounded-kula(1em);
+					@include rounded-kula(13px);
 					margin: 0 1px;
 					padding: 10px 20px 10px 20px;
+
+					&:before, &:after {
+						position: absolute;
+						content: ' ';
+						border-radius: 18px;
+						border: 6px solid $buttonbg1;
+						width: 25px;
+						height: 20px;
+					}
+
+					&:before {
+						left: -31px;
+						bottom: -6px;
+						clip: rect(15px, 31px, 26px, 16px);
+					}
+
+					&:after {
+						right: -31px;
+						top: -6px;
+						clip: rect(6px, 16px, 18px, 6px);
+					}
+
+					&:hover:before, &:hover:after, &.selected:after, &.selected:before {
+						border-color: $buttonbg2;
+					}
 				}
 			}
+
 			li:first-child {
 				a {
 					border-top-left-radius: 0;
+
+					&:before {
+						border-color: transparent;
+					}
 				}
 			}
 		}
