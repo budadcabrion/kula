@@ -1,0 +1,24 @@
+$hfont: 'din-regular', 'Arial Black', sans-serif;
+$pfont: 'Open Sans', sans-serif;
+$color1: #46729c;
+$color2: #2b5177;
+
+$bgcolor1: #E1E6EA;
+
+$buttonbg1: #4D5C6A;
+$buttonbg2: #97A1AA;
+
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin rounded-kula($radius: 0.5em) {
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}

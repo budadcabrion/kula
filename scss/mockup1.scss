@@ -1,0 +1,88 @@
+@import 'globals.scss';
+
+body, p{
+	font-family: $pfont
+}
+
+h1,h2,h3,h4,h5 {
+	font-family: $hfont;
+	color: $color1;
+
+	.alt{
+		color: $color2;
+	}
+}
+
+a{
+	color:$color2;
+	text-decoration:none;
+	
+	&:visited{
+		color:$color2;
+	}
+	&:active{
+		color:$color1;
+	};
+	&:hover{
+		color:$color1;
+	}
+}
+
+#navbuttons {
+	li {
+		a {
+			font-family: $hfont;
+			background-color: $buttonbg1;
+			color: white;
+		}
+		a:hover, a:active, a.selected {
+			background-color: $buttonbg2;
+		}
+	}
+}
+
+@media screen and (min-width: 40.5em) {
+	html, body {
+		height: 100%;
+	}
+
+	#navbar {
+		position:fixed;
+	    bottom: 0px;
+	    height: 120px;
+	    width: 100%;
+		background-color: $bgcolor1;
+
+		h1 {
+			font-size: 50px;
+			margin: 55px 0 4px 10px;
+
+			#hamburger {
+				display:none;
+			}
+		}
+
+		#navbuttons {
+			position: absolute;
+			top: 0;
+
+			li {
+				float:left;
+				display:block;
+				font-weight: light;
+				a {
+					display:block;
+					margin: 10px;
+					@include rounded-kula(1em);
+					margin: 0 1px;
+					padding: 10px 20px 10px 20px;
+				}
+			}
+			li:first-child {
+				a {
+					border-top-left-radius: 0;
+				}
+			}
+		}
+	}
+}
