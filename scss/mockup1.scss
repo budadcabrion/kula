@@ -100,7 +100,7 @@ a{
 						clip: rect(6px, 16px, 18px, 6px);
 					}
 
-					&:hover:before, &:hover:after {
+					&:hover:before, &:hover:after, &.selected:after, &.selected:before {
 						border-color: $buttonbg2;
 					}
 				}
@@ -109,6 +109,10 @@ a{
 			li:first-child {
 				a {
 					border-top-left-radius: 0;
+
+					&:before {
+						border-color: transparent;
+					}
 				}
 			}
 		}
