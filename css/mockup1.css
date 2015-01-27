@@ -13,9 +13,34 @@ a {
   a:visited {
     color: #2b5177; }
   a:active {
-    color: #46729c; }
+    color: #2b5177; }
   a:hover {
-    color: #46729c; }
+    color: #2b5177; }
+
+p {
+  line-height: 1.8em; }
+
+/*
+.ar-wrapper-ar-70-30{ position: relative; overflow-y: hidden; width: 60%; }
+.ar-wrapper-ar-70-30:before{ content: ""; display: block; padding-top: 50%; }
+.ar-70-30 {  height: 30vw; overflow: hidden; text-overflow: ellipsis; }
+*/
+.ar-inside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.fade:after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 1.2em;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%); }
 
 #navbar {
   width: 100%; }
@@ -32,7 +57,7 @@ a {
       font-family: "din-regular", "Arial Black", sans-serif;
       background-color: #4D5C6A;
       color: white;
-      font-size: 1.5em;
+      font-size: 2em;
       -webkit-border-radius: 0.25em;
       -moz-border-radius: 0.25em;
       border-radius: 0.25em;
@@ -41,18 +66,54 @@ a {
     #navbar #navbuttons li a:hover, #navbar #navbuttons li a:active, #navbar #navbuttons li a.selected {
       background-color: #97A1AA; }
 
-#teachers h2 {
-  font-size: 2em;
-  margin-bottom: 5px;
-  clear: both; }
-#teachers img {
-  width: 30%;
-  float: left;
-  border: 1px solid #ccc;
-  padding: 1px;
-  margin: 0 15px 5px 0; }
-#teachers p {
-  margin-bottom: 20px; }
+.teachers {
+  /*
+  	a:hover .item{
+  		background-color: #f8f8ff;
+  	}
+  */
+  /*
+  	.fade {
+  		position: relative; 
+  		width: 100%;
+  	    bottom: 4em;
+  	    height: 4em;
+  	    background-image: linear-gradient(
+  	        rgba(255, 255, 255, 0) 0%,
+  	        rgba(255, 255, 255, 1) 100%
+  	    );
+  	}
+  */ }
+  .teachers .item {
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    position: inherit;
+    top: inherit;
+    background-color: white;
+    padding: 0.5em;
+    margin: 0.5em; }
+    .teachers .item p {
+      height: 30vw;
+      overflow: hidden; }
+  .teachers .item.selected p {
+    height: inherit;
+    overflow: inherit; }
+  .teachers h2 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    clear: both; }
+  .teachers img {
+    width: 30%;
+    float: left;
+    border: 1px solid #ccc;
+    padding: 1px;
+    margin: 0 15px 5px 0; }
+
+.teachers.single .item {
+  display: none; }
+.teachers.single .item.selected {
+  display: block; }
 
 @media screen and (max-width: 799px) {
   #navbar {
@@ -61,16 +122,21 @@ a {
     #navbar #navbuttons {
       display: none;
       position: absolute;
-      width: 200px;
+      width: 250px;
       height: 2000px;
       right: 0; }
     #navbar #navbuttons.selected {
       display: block; }
+      #navbar #navbuttons.selected li.filler {
+        display: none !important; }
 
   .page {
-    margin: 4em 10px 10px 10px; }
-    .page .nav {
-      display: none; } }
+    margin: 55px 0 0 0;
+    /*
+    margin: 4em 10px 10px 10px;
+    .nav {
+    	display: none;
+    }*/ } }
 @media screen and (min-width: 800px) {
   html, body {
     height: 100%; }
@@ -92,21 +158,21 @@ a {
       top: 0;
       left: 0;
       width: 100%;
-      display: block; }
+      display: block;
+      white-space: nowrap; }
       #navbar #navbuttons li {
-        float: left;
-        display: block;
+        /*float:left;*/
+        display: inline-block;
         font-weight: light; }
         #navbar #navbuttons li a {
           font-size: 1em;
           display: block;
           position: relative;
-          margin: 10px;
           border-top-left-radius: 13px;
           border-bottom-right-radius: 13px;
           border-bottom-left-radius: 0;
           border-top-right-radius: 0;
-          margin: 0 1px;
+          margin: 0;
           padding: 10px 20px 10px 20px; }
           #navbar #navbuttons li a:before, #navbar #navbuttons li a:after {
             position: absolute;
@@ -129,50 +195,54 @@ a {
         border-top-left-radius: 0; }
         #navbar #navbuttons li:first-child a:before {
           border-color: transparent; }
+      #navbar #navbuttons li.filler {
+        width: 100% !important; }
+        #navbar #navbuttons li.filler a:hover:before, #navbar #navbuttons li.filler a:hover:after, #navbar #navbuttons li.filler a.selected:after, #navbar #navbuttons li.filler a.selected:before {
+          border-color: #4D5C6A; }
 
   .page {
     /*margin: 0 auto 200px auto;
     min-height: 100%;*/
     height: 100%;
-    margin: 0; }
+    margin: 0 50px 150px 50px; }
 
-  #teachers {
-    background-color: #BAC1B4;
-    /*margin: 1em 1em 150px 1em;*/ }
-    #teachers .nav {
-      width: 20%;
-      margin: 0; }
-      #teachers .nav h1, #teachers .nav a {
-        color: #CC6600;
-        margin: 2px;
-        -webkit-border-radius: 0.5em;
-        -moz-border-radius: 0.5em;
-        border-radius: 0.5em;
-        padding: 10px;
-        display: block;
-        background-color: white; }
-      #teachers .nav h1 {
-        color: #CC6600;
-        font-size: 2em; }
-      #teachers .nav a {
-        color: #CC6600; }
-      #teachers .nav ul {
-        height: 60%;
-        overflow-y: scroll; }
-    #teachers .info {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 25%;
-      width: 75%; }
-      #teachers .info img {
+  .teachers {
+    /*background-color: #BAC1B4;
+    margin: 1em 1em 150px 1em;*/
+    		/*
+    		a:hover .item{
+    			background-color: inherit;
+    		}
+    */ }
+    .teachers .item {
+      overflow: auto;
+      margin-bottom: 40px; }
+      .teachers .item img {
         max-width: 360px;
         max-height: 380px; }
-    #teachers .info.selected {
+      .teachers .item p {
+        width: inherit;
+        height: inherit;
+        overflow: inherit; }
+    .teachers .bottom-spacer {
+      clear: both;
+      display: block;
+      height: 150px; }
+    .teachers.single .item {
       display: block; } }
-@media screen and (min-width: 1200px) {
-  #teachers .info {
-    float: left;
-    width: 48%; } }
+/*
+
+@media screen and (min-width: 1800px) {
+	.teachers {
+		.item {
+			float:left;
+			display:block;
+			width: 48%;
+
+		}
+	}
+}
+
+*/
 
 /*# sourceMappingURL=mockup1.css.map */

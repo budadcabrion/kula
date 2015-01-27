@@ -5,7 +5,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 
 	<link rel="stylesheet" href="fonts/din-regular.css" type="text/css" charset="utf-8" />
-
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/mockup1.css" />
@@ -19,6 +19,8 @@
 	<![endif]-->
 
 	<script src="js/mockup1.js" type="text/javascript"></script>
+	<script src="js/clamp.min.js"></script>
+	<script src="js/toclamp.js"></script>
 
 	<style type="text/css">
 		
@@ -37,106 +39,128 @@
 			<li><a id="nav_classes" href="#">CLASSES</a></li>
 			<li><a id="nav_workshops" href="#">WORKSHOPS</a></li>
 			<li><a id="nav_retreats" href="#">RETREATS</a></li>
-			<li><a id="nav_teachers" href="#">TEACHERS</a></li>
+			<li><a id="nav_teachers" href="#teachers">TEACHERS</a></li>
 			<li><a id="nav_contact" href="#">CONTACT</a></li>
-
+			<li class="filler"><a>&nbsp;</a></li>
 		</ul>
 	</div>
 
-	<div id="teachers" class="page">
+	<div class="teachers page">
 
-		
+		<!--
 		<div class="nav">
-
 			<h1>TEACHERS</h1>
-			<ul>
-				<li><a href="#" class="selected">schuyler</a></li>
-				<li><a href="#">aarona</a></li>
-				<li><a href="#">alex</a></li>
-				<li><a href="#">alison</a></li>
-				<li><a href="#">alyona</a></li>
-				<li><a href="#">andrew</a></li>
-				<li><a href="#">annie</a></li>
-				<li><a href="#">anya</a></li>
-				<li><a href="#">ariel</a></li>
-				<li><a href="#">benn</a></li>
-				<li><a href="#">charlotte</a></li>
-				<li><a href="#">erin d.</a></li>
-				<li><a href="#">erin m.</a></li>
-				<li><a href="#">jen g.</a></li>
-				<li><a href="#">jillian</a></li>
-				<li><a href="#">kat</a></li>
-				<li><a href="#">kevin b.</a></li>
-				<li><a href="#">kevin c.</a></li>
-				<li><a href="#">lara</a></li>
-				<li><a href="#">lindsay</a></li>
-				<li><a href="#">lori</a></li>
-				<li><a href="#">magi</a></li>
-				<li><a href="#">margaret</a></li>
-				<li><a href="#">marisa</a></li>
-				<li><a href="#">michele</a></li>
-				<li><a href="#">miles</a></li>
-				<li><a href="#">miriam</a></li>
-				<li><a href="#">nikki c</a></li>
-				<li><a href="#">nikki v.</a></li>
-				<li><a href="#">oceana</a></li>
-				<li><a href="#">peiling</a></li>
-				<li><a href="#">rebecca</a></li>
-				<li><a href="#">robin</a></li>
-				<li><a href="#">sangeeta</a></li>
-				<li><a href="#">shahar</a></li>
-				<li><a href="#">teri</a></li>
-				<li><a href="#">thomas</a></li>
-			</ul>
-		</div>
-		
-		<div class="info" id="schuyler">
-
-			<h2>schuyler</h2>
-
-			<img src="http://kulayoga.com/images/teachers/sky%202%20web.jpg"/>
-
-			<p>
-			I used to think that yoga was something my parents did to embarrass me in front of my friends in junior high. But 20 years ago, recovering from a back injury, I began practicing asana and discovered something I had been seeking for years: the manifestation of meditation through motion. Over the years, I developed a signature style which integrates the breath based flow of Astanga and the precision of Iyengar into a deep, sweaty and transformative mind/body experience. Opening Kula was my attempt to bring a little California vibe to the mean streets of NYC. Abundant love and thanks to the Kula family who have made this a REAL kula or “intentional community” - as well as the coolest hang out in the world for my three daughters, who will no doubt find me excruciatingly embarrassing in about 10 years. (I am also lucky enough to be the co-creator of the magical Wanderlust Festival - which is not to be missed. wanderlustfestival.com for eye candy.)
-			</p>
 
 		</div>
+		-->
 
-		<div class="info" id="aarona">
+		<a href="#teachers-schuyler">
+			<div class="item" id="schuyler">
+				<div class="item-content">
+					<h2>schuyler</h2>
 
-			<h2>aarona</h2>
+					<img src="http://kulayoga.com/images/teachers/sky%202%20web.jpg"/>
 
-			<img src="http://kulayoga.com/images/teachers/aarona%20web.jpg"/>
+					<p class="ar-70-30">
+						I used to think that yoga was something my parents did to embarrass me in front of my friends in junior high. But 20 years ago, recovering from a back injury, I began practicing asana and discovered something I had been seeking for years: the manifestation of meditation through motion. Over the years, I developed a signature style which integrates the breath based flow of Astanga and the precision of Iyengar into a deep, sweaty and transformative mind/body experience. Opening Kula was my attempt to bring a little California vibe to the mean streets of NYC. Abundant love and thanks to the Kula family who have made this a REAL kula or “intentional community” - as well as the coolest hang out in the world for my three daughters, who will no doubt find me excruciatingly embarrassing in about 10 years. (I am also lucky enough to be the co-creator of the magical Wanderlust Festival - which is not to be missed. wanderlustfestival.com for eye candy.)
+						<!--<div class="fade">fdsfs</div>-->
+					</p>
+				</div>
+			</div>
+		</a>
 
-			<p>
-			Born in Los Angeles and relocating several times while growing up, my life was shaped by a wide array of experiences, people, and places. When my older brother turned me onto yoga during a low time over 16 years ago, my perspective shifted even further, and I've been dedicated to the continual waves of my yoga practice ever since. Maybe this has all tinted my need to move and teach from an endless plethora of inspiration, or my appetite for adventure and travel, or to my continual search for balance. In class, on global retreats, and one-on-one yoga/lifestyle sessions, I share what has most informed my own wellbeing through the years, and it keeps evolving. Inspired by many teachers, tedious life obstacles, and the intelligent sweat of Kula, my classes are full of vigor and grace with an acute focus on the connections between breath to movement, head to heart, and feet to core. I like to challenge these dynamics so you can experience a steadiness and knowing of your own body that you can take with you into every cell and aspect of life. Music moves me deeply, which I share through thoughtfully created playlists and my weekly live 'Yoga Soundscape' events. Come join me and find out more: www.yogaofnourishment.com
-			</p>
+		<a href="#teachers-aarona">
+			<div class="item" id="aarona">
+				<div class="item-content">
 
-		</div>
+					<h2>aarona</h2>
 
-		<div class="info" id="blarg">
+					<img src="http://kulayoga.com/images/teachers/aarona%20web.jpg"/>
 
-			<h2>schuyler</h2>
+					<p>
+					Born in Los Angeles and relocating several times while growing up, my life was shaped by a wide array of experiences, people, and places. When my older brother turned me onto yoga during a low time over 16 years ago, my perspective shifted even further, and I've been dedicated to the continual waves of my yoga practice ever since. Maybe this has all tinted my need to move and teach from an endless plethora of inspiration, or my appetite for adventure and travel, or to my continual search for balance. In class, on global retreats, and one-on-one yoga/lifestyle sessions, I share what has most informed my own wellbeing through the years, and it keeps evolving. Inspired by many teachers, tedious life obstacles, and the intelligent sweat of Kula, my classes are full of vigor and grace with an acute focus on the connections between breath to movement, head to heart, and feet to core. I like to challenge these dynamics so you can experience a steadiness and knowing of your own body that you can take with you into every cell and aspect of life. Music moves me deeply, which I share through thoughtfully created playlists and my weekly live 'Yoga Soundscape' events. Come join me and find out more: www.yogaofnourishment.com
+					</p>
+				</div>
+			</div>
+		</a>
 
-			<img src="http://kulayoga.com/images/teachers/sky%202%20web.jpg"/>
+		<a href="#teachers-alex">
+			<div class="item" id="alex">
+				<div class="item-content">
+					<h2>alex</h2>
 
-			<p>
-			I used to think that yoga was something my parents did to embarrass me in front of my friends in junior high. But 20 years ago, recovering from a back injury, I began practicing asana and discovered something I had been seeking for years: the manifestation of meditation through motion. Over the years, I developed a signature style which integrates the breath based flow of Astanga and the precision of Iyengar into a deep, sweaty and transformative mind/body experience. Opening Kula was my attempt to bring a little California vibe to the mean streets of NYC. Abundant love and thanks to the Kula family who have made this a REAL kula or “intentional community” - as well as the coolest hang out in the world for my three daughters, who will no doubt find me excruciatingly embarrassing in about 10 years. (I am also lucky enough to be the co-creator of the magical Wanderlust Festival - which is not to be missed. wanderlustfestival.com for eye candy.)
-			</p>
+					<img src="http://kulayoga.com/images/teachers/alex%20web.jpg"/>
 
-		</div>
+					<p>
+					I'm a native New Yorker who grew-up in the Chelsea Hotel with a mom who once in a while would host a Kirtan in our living room. I've been teaching yoga for almost 20 years. I started teaching at the original Jivamukti Yoga Center and at my own studio in Rhinebeck, NY which I opened in 1996. Eventually I moved back to NYC where, for some time, I taught out of my home studio (WestvillageYoga) and at Kula Yoga Project where I am hopefully considered a senior teacher (though they never offered me assisted living). I had a special NYC rent that dissolved (as they tend to do) and with the great income of full-time yoga teaching, we packed up our two kids and moved to my husbands home-town...Philadelphia! Lucky for me, Kula is letting me come teach a "master class" in Williamsburg the first saturday of every month. I could provide a list of amazing influential teachers, but instead I'll remain more mysterious. Some people say I'm known for the graceful integration of clear and precise alignment cues, intelligent sequencing, practical philosophy, and generous amounts of “revelatory” hands-on assists.
+					</p>
+				</div>
+			</div>
+		</a>
 
-		<div class="info" id="blarg2">
+		<a href="#teachers-alison">
 
-			<h2>aarona</h2>
+			<div class="item" id="alison">
+				<div class="item-content">
 
-			<img src="http://kulayoga.com/images/teachers/aarona%20web.jpg"/>
+					<h2>alison</h2>
 
-			<p>
-			Born in Los Angeles and relocating several times while growing up, my life was shaped by a wide array of experiences, people, and places. When my older brother turned me onto yoga during a low time over 16 years ago, my perspective shifted even further, and I've been dedicated to the continual waves of my yoga practice ever since. Maybe this has all tinted my need to move and teach from an endless plethora of inspiration, or my appetite for adventure and travel, or to my continual search for balance. In class, on global retreats, and one-on-one yoga/lifestyle sessions, I share what has most informed my own wellbeing through the years, and it keeps evolving. Inspired by many teachers, tedious life obstacles, and the intelligent sweat of Kula, my classes are full of vigor and grace with an acute focus on the connections between breath to movement, head to heart, and feet to core. I like to challenge these dynamics so you can experience a steadiness and knowing of your own body that you can take with you into every cell and aspect of life. Music moves me deeply, which I share through thoughtfully created playlists and my weekly live 'Yoga Soundscape' events. Come join me and find out more: www.yogaofnourishment.com
-			</p>
+					<img src="http://kulayoga.com/images/teachers/alison%20web.jpg"/>
 
-		</div>
+					<p>
+					I love Kula. I have loved her since the first day she opened her doors. I have been teaching for over 12 years and love helping people remember inner space and a free body. My first teacher training was in 2001 from OM yoga center in NYC and continue to be influenced by many master teachers from assorted traditions. My classes are breath and heart centered with deep, intelligent sequences that secretly make you work. I incorporate humor, kundalini and devotional intention. I lead and co-leads retreats all over the world. My most popular are my Goddess retreats that create a transformative, inclusive, healing space for women. My spiritual path also includes South American mysticism, Indigenous plant medicine and energetic touch.I live in the woods with my intuitive, bodyworker hubby, Anton and magical munchkins Violet and Joseph Litte Hawk.
+					</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="#teachers-alyona">
+
+			<div class="item" id="alyona">
+				<div class="item-content">
+					<h2>alyona</h2>
+
+					<img src="http://kulayoga.com/images/teachers/alyona.jpg"/>
+
+					<p>
+					My class is breath centered dynamic sweaty vinyasa flow with emphasis on grace, bandhas, playfulness and alignment. For me, yoga is a practice of using the breath as a tool to unify mind, body, heart and spirit to experience the full authentic self. I found my way on to the mat, ten years ago after a decade of ballet practice. The joy, compassion and grounded sense of self I was gifted is what I aim to share with my students. My teachings come from lifelong experiments in movement, personal practice and the many incredible teachers I have met and continue to meet along the way. Special thank you to Maestro Manuel for his teachings of indigenous and shamanic traditions. Deep gratitude to all of the teachers at Kula Yoga Project for sharing the art of sequencing, and freedom and for encouraging my evolution as a practitioner, teacher and human. I hope that our practice together on the mat will inspire you to walk in beauty: with strength, love, light and peace in your heart. You can find me at breathwithalyona.blogspot.com.
+					</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="#teachers-annie">
+			<div class="item" id="annie">
+				<div class="item-content">
+					<h2>alyona</h2>
+
+					<img src="http://kulayoga.com/images/teachers/annie%20web.jpg"/>
+
+					<p>
+					Annie designs and teaches yoga for actors at both NYU’s Tisch School of Graduate Acting and the Yale School of Drama. Early training as an actor and theater director led her to yoga – breath, body, heart, and mind. A deep, vigorous, breath-led practice is the foundation of her teaching style with particular emphasis on calming nerves, quieting the mind and becoming more intimate with our fear (and fearlessness). She is currently involved in an ongoing training to design and teach yoga to veterans who struggle with PTSD and related issues. Annie has been teaching for over ten years and remains completely awestruck (and humbled ) by her students.
+					</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="#teachers-anya">
+			<div class="item" id="anya">
+				<div class="item-content">
+					<h2>anya</h2>
+
+					<img src="http://kulayoga.com/images/teachers/anya%20web%202.jpg"/>
+
+					<p>
+					In many ways, most of my adult life has been a love affair with movement and stillness; specifically, my training has focused around the nuance and rhythm of street dance as an art form, a culture, and a way of connecting to self. Following an injury in 2004, I began studying and practicing yoga asana as it applied structurally and therapeutically to the body. Through my journey I have found clear comparisons and connections in these different practices and my desire to highlight these affinities birthed Breakti® Movement (www.breakti.com) which keeps me honest, humble and always inspired to move. In class, you can expect intelligent sequences using unique transitions and approaches to familiar asanas; infused with a dose of grit and lightheartedness. I am incredibly honored to be at Kula, where I have learned to sweat smarter and play harder on the mat, and I thank Schuyler, Nikki and all of the Kula fam I’ve connected with along the way. Lastly, I thank my mentor, Raphael Xavier, who moves me to dig deep and seek the rhythm that exists within us all.
+					</p>
+				</div>
+			</div>
+		</a>
+
+		<div class="bottom-spacer"></div>
+
+
+
 
 	</div>
 

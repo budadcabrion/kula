@@ -33,11 +33,40 @@ a{
 		color:$color2;
 	}
 	&:active{
-		color:$color1;
+		color:$color2;
 	};
 	&:hover{
-		color:$color1;
+		color:$color2;
 	}
+}
+
+p {
+	line-height: 1.8em;
+}
+
+/*
+.ar-wrapper-ar-70-30{ position: relative; overflow-y: hidden; width: 60%; }
+.ar-wrapper-ar-70-30:before{ content: ""; display: block; padding-top: 50%; }
+.ar-70-30 {  height: 30vw; overflow: hidden; text-overflow: ellipsis; }
+*/
+
+.ar-inside {
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.fade:after {
+	content: "";
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 70%;
+	height: 1.2em;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
 }
 
 #navbar {
@@ -55,7 +84,6 @@ a{
 	}
 
 	#navbuttons {
-
 		background-color: $bgcolor1;
 		li {
 			a {
@@ -63,7 +91,7 @@ a{
 				font-family: $hfont;
 				background-color: $buttonbg1;
 				color: white;
-				font-size: 1.5em;
+				font-size: 2em;
 				@include rounded(0.25em);
 				padding: 5px;
 				margin: 5px;
@@ -75,7 +103,34 @@ a{
 	}
 }
 
-#teachers {
+.teachers {
+/*
+	a:hover .item{
+		background-color: #f8f8ff;
+	}
+*/
+	.item {
+		@include rounded(1em);
+		position: inherit;
+		top: inherit;
+		background-color: white;
+		padding: 0.5em;
+		margin: 0.5em;
+		p {
+			height: 30vw;
+			overflow: hidden;
+
+		}
+	}
+
+	.item.selected {
+		p {
+			height: inherit;
+			overflow: inherit;
+		}
+	}
+
+
 	h2 {
 		font-size: 2em;
 		margin-bottom: 5px;
@@ -90,11 +145,28 @@ a{
 		margin: 0 15px 5px 0;
 	}
 
-	p {
-		margin-bottom: 20px;
+/*
+	.fade {
+		position: relative; 
+		width: 100%;
+	    bottom: 4em;
+	    height: 4em;
+	    background-image: linear-gradient(
+	        rgba(255, 255, 255, 0) 0%,
+	        rgba(255, 255, 255, 1) 100%
+	    );
 	}
+*/
 }
 
+.teachers.single {
+	.item {
+		display:none;
+	}
+	.item.selected {
+		display:block;
+	}
+}
 
 // 	                                                             
 // 	                               88          88 88             
@@ -118,21 +190,28 @@ a{
 
 			display:none;
 			position: absolute;
-			width: 200px;
+			width: 250px;
 			height: 2000px;
 			right: 0;
 		}
 
 		#navbuttons.selected {
 			display:block;
+
+			li.filler {
+				display:none !important;
+			}
 		}
+
 	}
 
 	.page {
+		margin: 55px 0 0 0;
+		/*
 		margin: 4em 10px 10px 10px;
 		.nav {
 			display: none;
-		}
+		}*/
 	}
 }
 
@@ -177,17 +256,18 @@ a{
 			width: 100%;
 			display:block;
 
+			white-space:nowrap;
+
 			li {
-				float:left;
-				display:block;
+				/*float:left;*/
+				display:inline-block;
 				font-weight: light;
 				a {
 					font-size: 1em;
 					display: block;
 					position: relative;
-					margin: 10px;
 					@include rounded-kula(13px);
-					margin: 0 1px;
+					margin: 0;
 					padding: 10px 20px 10px 20px;
 
 					&:before, &:after {
@@ -226,6 +306,16 @@ a{
 					}
 				}
 			}
+
+			li.filler {
+
+				width: 100% !important;
+				a {
+					&:hover:before, &:hover:after, &.selected:after, &.selected:before {
+						border-color: $buttonbg1;
+					}
+				}
+			}
 		}
 	}
 
@@ -233,65 +323,54 @@ a{
 		/*margin: 0 auto 200px auto;
 		min-height: 100%;*/
 		height: 100%;
-		margin: 0;
+		margin: 0 50px 150px 50px;
 	}
 
-	#teachers {
-		background-color: #BAC1B4;
-		/*margin: 1em 1em 150px 1em;*/
+	.teachers {
+		/*background-color: #BAC1B4;
+		margin: 1em 1em 150px 1em;*/
 
-		.nav {
-			width: 20%;
-			margin: 0;
-			
-			h1, a {
-				color: #CC6600;
-				margin: 2px;
-				@include rounded(0.5em);
-				padding: 10px;
-				display:block;
-				background-color: white;
-			}
-			
-			h1 {
-				color: #CC6600;
-				font-size: 2em;
-			}
-			a {
-				color: #CC6600;
-			}
-			ul {
-				height: 60%;
-				overflow-y:scroll;
-
-			}
-		}
-
-		.info {
-			display:none;
-			position:fixed;
-			top: 0;
-			left: 25%;
-			width: 75%;
-			
+		.item {
 			img {
 				max-width: 360px;
 				max-height: 380px;
 			}
+			p {
+				width: inherit;
+				height: inherit;
+				overflow: inherit;
+			}
+			overflow: auto;
+			margin-bottom: 40px;
 		}
-		.info.selected {
+
+		/*
+		a:hover .item{
+			background-color: inherit;
+		}
+*/
+		.bottom-spacer {
+			clear:both;
+			display:block;
+			height: 150px;
+		}
+		&.single .item {
 			display:block;
 		}
 	}
 }
 
+/*
 
-@media screen and (min-width: 1200px) {
-	#teachers {
-		.info {
+@media screen and (min-width: 1800px) {
+	.teachers {
+		.item {
 			float:left;
+			display:block;
 			width: 48%;
 
 		}
 	}
 }
+
+*/
